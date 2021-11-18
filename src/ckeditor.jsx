@@ -169,6 +169,9 @@ export default class CKEditor extends React.Component {
 						this.props.onReady( this.editor );
 					}
 				} );
+				const body = editor.ui.view.body._bodyCollectionContainer
+				body.remove()
+				editor.ui.view.element.appendChild(body)
 
 				return editor;
 			} );
